@@ -1,0 +1,902 @@
+[
+  {
+    "id": "finance",
+    "label": "Finance & Banking",
+    "subs": [
+      {
+        "id": "banking",
+        "label": "Banking"
+      },
+      {
+        "id": "markets",
+        "label": "Markets & Stocks"
+      },
+      {
+        "id": "insurance",
+        "label": "Insurance"
+      },
+      {
+        "id": "nbfc",
+        "label": "NBFC & Lending"
+      },
+      {
+        "id": "payments",
+        "label": "Payments & Fintech"
+      },
+      {
+        "id": "mutual-funds",
+        "label": "Mutual Funds"
+      },
+      {
+        "id": "wealth-management",
+        "label": "Wealth Management"
+      },
+      {
+        "id": "private-equity",
+        "label": "Private Equity & VC"
+      },
+      {
+        "id": "taxation",
+        "label": "Taxation & GST"
+      },
+      {
+        "id": "pension",
+        "label": "Pension & Retirement"
+      },
+      {
+        "id": "earnings-deals",
+        "label": "Earnings & Deals"
+      }
+    ]
+  },
+  {
+    "id": "it-software",
+    "label": "IT & Software",
+    "subs": [
+      {
+        "id": "software-services",
+        "label": "IT Services"
+      },
+      {
+        "id": "saas",
+        "label": "SaaS & Products"
+      },
+      {
+        "id": "ai-ml",
+        "label": "AI & Machine Learning"
+      },
+      {
+        "id": "cybersecurity",
+        "label": "Cybersecurity"
+      },
+      {
+        "id": "cloud",
+        "label": "Cloud & Data Centres"
+      },
+      {
+        "id": "fintech-software",
+        "label": "Fintech Software"
+      },
+      {
+        "id": "data-analytics",
+        "label": "Data & Analytics"
+      },
+      {
+        "id": "enterprise-erp",
+        "label": "Enterprise & ERP"
+      },
+      {
+        "id": "gcc",
+        "label": "GCC & Captives"
+      },
+      {
+        "id": "it-hiring",
+        "label": "IT Hiring & Jobs"
+      },
+      {
+        "id": "it-finance",
+        "label": "IT Finance & Deals"
+      }
+    ]
+  },
+  {
+    "id": "publishing",
+    "label": "Publishing",
+    "subs": [
+      {
+        "id": "books",
+        "label": "Books"
+      },
+      {
+        "id": "magazines",
+        "label": "Magazines"
+      },
+      {
+        "id": "academic",
+        "label": "Academic & Journals"
+      },
+      {
+        "id": "educational",
+        "label": "Educational"
+      },
+      {
+        "id": "professional-technical",
+        "label": "Professional & Technical"
+      },
+      {
+        "id": "digital",
+        "label": "Digital"
+      },
+      {
+        "id": "printing-pod",
+        "label": "Printing & POD"
+      },
+      {
+        "id": "self-publishing",
+        "label": "Self-Publishing"
+      },
+      {
+        "id": "scientific-medical",
+        "label": "Scientific & Medical"
+      },
+      {
+        "id": "accessibility",
+        "label": "Accessibility"
+      },
+      {
+        "id": "publishing-finance",
+        "label": "Publishing Finance"
+      }
+    ]
+  },
+  {
+    "id": "culinary-hospitality",
+    "label": "Culinary & Hospitality",
+    "subs": [
+      {
+        "id": "restaurants",
+        "label": "Restaurants"
+      },
+      {
+        "id": "cloud-kitchens",
+        "label": "Cloud Kitchens"
+      },
+      {
+        "id": "catering",
+        "label": "Catering"
+      },
+      {
+        "id": "hotels",
+        "label": "Hotels & Resorts"
+      },
+      {
+        "id": "bakery",
+        "label": "Bakery & Confectionery"
+      },
+      {
+        "id": "food-processing",
+        "label": "Food Processing"
+      },
+      {
+        "id": "cafes-qsr",
+        "label": "Cafes & QSR"
+      },
+      {
+        "id": "food-safety",
+        "label": "Food Safety & FSSAI"
+      },
+      {
+        "id": "bars-beverages",
+        "label": "Bars & Beverages"
+      },
+      {
+        "id": "packaged-gourmet",
+        "label": "Packaged & Gourmet"
+      },
+      {
+        "id": "hospitality-finance",
+        "label": "Hospitality Finance"
+      }
+    ]
+  },
+  {
+    "id": "healthcare-medical",
+    "label": "Healthcare & Medical",
+    "subs": [
+      {
+        "id": "pharmacy",
+        "label": "Pharmacy"
+      },
+      {
+        "id": "physiotherapy",
+        "label": "Physiotherapy"
+      },
+      {
+        "id": "nursing",
+        "label": "Nursing"
+      },
+      {
+        "id": "diagnostics",
+        "label": "Diagnostics & Labs"
+      },
+      {
+        "id": "hospital-management",
+        "label": "Hospital Management"
+      },
+      {
+        "id": "medical-devices",
+        "label": "Medical Devices"
+      },
+      {
+        "id": "dental",
+        "label": "Dental"
+      },
+      {
+        "id": "ayurveda",
+        "label": "Ayurveda & Wellness"
+      },
+      {
+        "id": "telemedicine",
+        "label": "Telemedicine & Digital Health"
+      },
+      {
+        "id": "mental-health",
+        "label": "Mental Health"
+      },
+      {
+        "id": "healthcare-finance",
+        "label": "Healthcare Finance"
+      }
+    ]
+  },
+  {
+    "id": "manufacturing",
+    "label": "Manufacturing",
+    "subs": [
+      {
+        "id": "engineering",
+        "label": "Engineering"
+      },
+      {
+        "id": "electronics",
+        "label": "Electronics"
+      },
+      {
+        "id": "machinery",
+        "label": "Machinery & Equipment"
+      },
+      {
+        "id": "chemicals",
+        "label": "Chemicals"
+      },
+      {
+        "id": "steel",
+        "label": "Steel & Metals"
+      },
+      {
+        "id": "plastics",
+        "label": "Plastics & Packaging"
+      },
+      {
+        "id": "automation-robotics",
+        "label": "Automation & Robotics"
+      },
+      {
+        "id": "semiconductors",
+        "label": "Semiconductors & Chips"
+      },
+      {
+        "id": "defence-manufacturing",
+        "label": "Defence Manufacturing"
+      },
+      {
+        "id": "industrial-policy",
+        "label": "Industrial Policy & PLI"
+      },
+      {
+        "id": "manufacturing-finance",
+        "label": "Manufacturing Finance"
+      }
+    ]
+  },
+  {
+    "id": "retail-ecommerce",
+    "label": "Retail & E-commerce",
+    "subs": [
+      {
+        "id": "retail",
+        "label": "Retail"
+      },
+      {
+        "id": "ecommerce",
+        "label": "E-commerce"
+      },
+      {
+        "id": "quick-commerce",
+        "label": "Quick Commerce"
+      },
+      {
+        "id": "fashion-retail",
+        "label": "Fashion Retail"
+      },
+      {
+        "id": "grocery",
+        "label": "Grocery & Supermarkets"
+      },
+      {
+        "id": "d2c",
+        "label": "D2C Brands"
+      },
+      {
+        "id": "luxury-retail",
+        "label": "Luxury & Premium Retail"
+      },
+      {
+        "id": "b2b-wholesale",
+        "label": "B2B & Wholesale"
+      },
+      {
+        "id": "retail-tech",
+        "label": "Retail Tech & POS"
+      },
+      {
+        "id": "consumer-durables",
+        "label": "Consumer Durables"
+      },
+      {
+        "id": "retail-finance",
+        "label": "Retail Finance"
+      }
+    ]
+  },
+  {
+    "id": "real-estate",
+    "label": "Real Estate & Construction",
+    "subs": [
+      {
+        "id": "housing",
+        "label": "Housing"
+      },
+      {
+        "id": "commercial",
+        "label": "Commercial Property"
+      },
+      {
+        "id": "infrastructure",
+        "label": "Infrastructure"
+      },
+      {
+        "id": "cement",
+        "label": "Cement & Materials"
+      },
+      {
+        "id": "interiors",
+        "label": "Interiors & Design"
+      },
+      {
+        "id": "proptech",
+        "label": "PropTech"
+      },
+      {
+        "id": "rental-coliving",
+        "label": "Rental & Co-living"
+      },
+      {
+        "id": "green-building",
+        "label": "Green Building"
+      },
+      {
+        "id": "construction-equipment",
+        "label": "Construction Equipment"
+      },
+      {
+        "id": "township-plots",
+        "label": "Township & Plots"
+      },
+      {
+        "id": "real-estate-finance",
+        "label": "Real Estate Finance"
+      }
+    ]
+  },
+  {
+    "id": "education-edtech",
+    "label": "Education & EdTech",
+    "subs": [
+      {
+        "id": "schools",
+        "label": "Schools"
+      },
+      {
+        "id": "higher-education",
+        "label": "Higher Education"
+      },
+      {
+        "id": "edtech",
+        "label": "EdTech"
+      },
+      {
+        "id": "coaching",
+        "label": "Coaching & Test Prep"
+      },
+      {
+        "id": "skills",
+        "label": "Skills & Certification"
+      },
+      {
+        "id": "study-abroad",
+        "label": "Study Abroad"
+      },
+      {
+        "id": "early-childhood",
+        "label": "Early Childhood"
+      },
+      {
+        "id": "board-schools",
+        "label": "International & Board Schools"
+      },
+      {
+        "id": "scholarships",
+        "label": "Scholarships"
+      },
+      {
+        "id": "student-loans",
+        "label": "Student Loans"
+      },
+      {
+        "id": "education-finance",
+        "label": "Education Finance"
+      }
+    ]
+  },
+  {
+    "id": "media-entertainment",
+    "label": "Media & Entertainment",
+    "subs": [
+      {
+        "id": "film",
+        "label": "Film"
+      },
+      {
+        "id": "ott",
+        "label": "OTT & Streaming"
+      },
+      {
+        "id": "television",
+        "label": "Television"
+      },
+      {
+        "id": "music",
+        "label": "Music"
+      },
+      {
+        "id": "radio-podcast",
+        "label": "Radio & Podcasts"
+      },
+      {
+        "id": "events",
+        "label": "Events & Live"
+      },
+      {
+        "id": "awards-festivals",
+        "label": "Awards & Festivals"
+      },
+      {
+        "id": "media-deals",
+        "label": "Media Deals & M&A"
+      },
+      {
+        "id": "celebrity",
+        "label": "Celebrity"
+      },
+      {
+        "id": "sports-media",
+        "label": "Sports Media & Rights"
+      },
+      {
+        "id": "media-finance",
+        "label": "Media Finance"
+      }
+    ]
+  },
+  {
+    "id": "logistics",
+    "label": "Logistics & Transport",
+    "subs": [
+      {
+        "id": "shipping",
+        "label": "Shipping & Ports"
+      },
+      {
+        "id": "road-transport",
+        "label": "Road Transport"
+      },
+      {
+        "id": "aviation",
+        "label": "Aviation"
+      },
+      {
+        "id": "railways",
+        "label": "Railways & Freight"
+      },
+      {
+        "id": "warehousing",
+        "label": "Warehousing"
+      },
+      {
+        "id": "delivery",
+        "label": "Courier & Delivery"
+      },
+      {
+        "id": "cold-chain",
+        "label": "Cold Chain"
+      },
+      {
+        "id": "metro-urban",
+        "label": "Metro & Urban Transport"
+      },
+      {
+        "id": "trade-customs",
+        "label": "Trade & Customs"
+      },
+      {
+        "id": "third-party-logistics",
+        "label": "3PL & Supply Chain"
+      },
+      {
+        "id": "logistics-finance",
+        "label": "Logistics Finance"
+      }
+    ]
+  },
+  {
+    "id": "energy",
+    "label": "Energy & Utilities",
+    "subs": [
+      {
+        "id": "power",
+        "label": "Power"
+      },
+      {
+        "id": "renewables",
+        "label": "Renewables"
+      },
+      {
+        "id": "oil-gas",
+        "label": "Oil & Gas"
+      },
+      {
+        "id": "water",
+        "label": "Water & Utilities"
+      },
+      {
+        "id": "ev-charging",
+        "label": "EV & Charging"
+      },
+      {
+        "id": "waste",
+        "label": "Waste & Recycling"
+      },
+      {
+        "id": "energy-storage",
+        "label": "Energy Storage & Batteries"
+      },
+      {
+        "id": "green-hydrogen",
+        "label": "Green Hydrogen"
+      },
+      {
+        "id": "coal-mining",
+        "label": "Coal & Mining"
+      },
+      {
+        "id": "tariffs-regulation",
+        "label": "Tariffs & Regulation"
+      },
+      {
+        "id": "energy-finance",
+        "label": "Energy Finance"
+      }
+    ]
+  },
+  {
+    "id": "agriculture-food",
+    "label": "Agriculture & Food Processing",
+    "subs": [
+      {
+        "id": "farming",
+        "label": "Farming"
+      },
+      {
+        "id": "agritech",
+        "label": "AgriTech"
+      },
+      {
+        "id": "dairy",
+        "label": "Dairy"
+      },
+      {
+        "id": "fisheries",
+        "label": "Fisheries"
+      },
+      {
+        "id": "food-exports",
+        "label": "Food Exports"
+      },
+      {
+        "id": "agri-inputs",
+        "label": "Agri Inputs"
+      },
+      {
+        "id": "poultry-meat",
+        "label": "Poultry & Meat"
+      },
+      {
+        "id": "horticulture",
+        "label": "Horticulture"
+      },
+      {
+        "id": "sugar-ethanol",
+        "label": "Sugar & Ethanol"
+      },
+      {
+        "id": "farm-machinery",
+        "label": "Farm Machinery"
+      },
+      {
+        "id": "agri-finance",
+        "label": "Agri Finance"
+      }
+    ]
+  },
+  {
+    "id": "automobile",
+    "label": "Automobile",
+    "subs": [
+      {
+        "id": "cars",
+        "label": "Cars"
+      },
+      {
+        "id": "two-wheelers",
+        "label": "Two-wheelers"
+      },
+      {
+        "id": "commercial-vehicles",
+        "label": "Commercial Vehicles"
+      },
+      {
+        "id": "auto-components",
+        "label": "Auto Components"
+      },
+      {
+        "id": "ev-auto",
+        "label": "Electric Vehicles"
+      },
+      {
+        "id": "tyres",
+        "label": "Tyres"
+      },
+      {
+        "id": "luxury-cars",
+        "label": "Luxury Cars"
+      },
+      {
+        "id": "used-cars",
+        "label": "Used Cars"
+      },
+      {
+        "id": "aftermarket",
+        "label": "Aftermarket & Service"
+      },
+      {
+        "id": "auto-tech",
+        "label": "Auto Tech & Software"
+      },
+      {
+        "id": "auto-finance",
+        "label": "Auto Finance"
+      }
+    ]
+  },
+  {
+    "id": "textiles-apparel",
+    "label": "Textiles & Apparel",
+    "subs": [
+      {
+        "id": "garments",
+        "label": "Garments"
+      },
+      {
+        "id": "spinning",
+        "label": "Spinning & Yarn"
+      },
+      {
+        "id": "handloom",
+        "label": "Handloom & Handicrafts"
+      },
+      {
+        "id": "fashion",
+        "label": "Fashion"
+      },
+      {
+        "id": "footwear",
+        "label": "Footwear"
+      },
+      {
+        "id": "technical-textiles",
+        "label": "Technical Textiles"
+      },
+      {
+        "id": "home-textiles",
+        "label": "Home Textiles"
+      },
+      {
+        "id": "dyeing-processing",
+        "label": "Dyeing & Processing"
+      },
+      {
+        "id": "sustainable-textiles",
+        "label": "Sustainable Textiles"
+      },
+      {
+        "id": "wool-silk",
+        "label": "Wool & Silk"
+      },
+      {
+        "id": "textile-finance",
+        "label": "Textile Finance"
+      }
+    ]
+  },
+  {
+    "id": "travel-tourism",
+    "label": "Travel & Tourism",
+    "subs": [
+      {
+        "id": "tourism",
+        "label": "Tourism"
+      },
+      {
+        "id": "travel-tech",
+        "label": "Travel Tech"
+      },
+      {
+        "id": "homestays",
+        "label": "Homestays"
+      },
+      {
+        "id": "pilgrimage",
+        "label": "Pilgrimage"
+      },
+      {
+        "id": "cruises",
+        "label": "Cruises"
+      },
+      {
+        "id": "mice",
+        "label": "MICE & Business Travel"
+      },
+      {
+        "id": "adventure-wildlife",
+        "label": "Adventure & Wildlife"
+      },
+      {
+        "id": "medical-tourism",
+        "label": "Medical Tourism"
+      },
+      {
+        "id": "visa-immigration",
+        "label": "Visa & Immigration"
+      },
+      {
+        "id": "destination-weddings",
+        "label": "Destination Weddings"
+      },
+      {
+        "id": "travel-finance",
+        "label": "Travel Finance"
+      }
+    ]
+  },
+  {
+    "id": "advertising-marketing",
+    "label": "Advertising & Marketing",
+    "subs": [
+      {
+        "id": "advertising",
+        "label": "Advertising"
+      },
+      {
+        "id": "digital-marketing",
+        "label": "Digital Marketing"
+      },
+      {
+        "id": "branding",
+        "label": "Branding & Design"
+      },
+      {
+        "id": "pr",
+        "label": "PR & Communications"
+      },
+      {
+        "id": "market-research",
+        "label": "Market Research"
+      },
+      {
+        "id": "influencer",
+        "label": "Influencer & Creator"
+      },
+      {
+        "id": "media-buying",
+        "label": "Media Buying & AdEx"
+      },
+      {
+        "id": "sponsorship",
+        "label": "Sponsorship & Sports"
+      },
+      {
+        "id": "adtech",
+        "label": "Ad Tech & Programmatic"
+      },
+      {
+        "id": "social-marketing",
+        "label": "Social Media Marketing"
+      },
+      {
+        "id": "agency-finance",
+        "label": "Agency Finance"
+      }
+    ]
+  },
+  {
+    "id": "animation-vfx",
+    "label": "Animation, VFX & Gaming",
+    "subs": [
+      {
+        "id": "animation",
+        "label": "Animation"
+      },
+      {
+        "id": "vfx",
+        "label": "VFX"
+      },
+      {
+        "id": "gaming",
+        "label": "Gaming & Esports"
+      },
+      {
+        "id": "arvr",
+        "label": "AR & VR"
+      },
+      {
+        "id": "comics",
+        "label": "Comics & Illustration"
+      },
+      {
+        "id": "post-production",
+        "label": "Post-production"
+      },
+      {
+        "id": "esports",
+        "label": "eSports & Tournaments"
+      },
+      {
+        "id": "virtual-production",
+        "label": "Virtual Production"
+      },
+      {
+        "id": "metaverse-web3",
+        "label": "Metaverse & Web3"
+      },
+      {
+        "id": "dubbing-localisation",
+        "label": "Dubbing & Localisation"
+      },
+      {
+        "id": "studio-finance",
+        "label": "Studio Finance"
+      }
+    ]
+  }
+]

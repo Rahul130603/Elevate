@@ -1,0 +1,239 @@
+@import "tailwindcss";
+
+/* Dark variants remain inactive: the news site always uses the light theme. */
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --font-sans: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue",
+    "Noto Sans", "Noto Sans Tamil", "Noto Sans Devanagari", "Noto Sans Bengali",
+    "Noto Sans Malayalam", "Noto Sans Gujarati", "Nirmala UI", Arial, sans-serif;
+
+  --color-brand-50: #fff7ed;
+  --color-brand-100: #ffedd5;
+  --color-brand-200: #fed7aa;
+  --color-brand-300: #fdba74;
+  --color-brand-400: #fb923c;
+  --color-brand-500: #f97316;
+  --color-brand-600: #ea580c;
+  --color-brand-700: #c2410c;
+  --color-brand-800: #9a3412;
+  --color-brand-900: #7c2d12;
+
+  --color-ink-50: #f7f7f8;
+  --color-ink-100: #eeeef0;
+  --color-ink-200: #dcdce2;
+  --color-ink-300: #b9b9c3;
+  --color-ink-400: #8b8b98;
+  --color-ink-500: #6b6b78;
+  --color-ink-600: #52525f;
+  --color-ink-700: #3f3f4a;
+  --color-ink-800: #26262e;
+  --color-ink-900: #17171d;
+  --color-ink-950: #0c0c11;
+
+  --animate-ticker: ticker 60s linear infinite;
+  --animate-blip: blip 1.8s ease-in-out infinite;
+
+  @keyframes ticker {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-50%);
+    }
+  }
+
+  @keyframes blip {
+    0%,
+    100% {
+      opacity: 1;
+      transform: scale(1);
+    }
+    50% {
+      opacity: 0.35;
+      transform: scale(0.7);
+    }
+  }
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    @apply bg-white text-ink-900 antialiased;
+    font-family: var(--font-sans);
+  }
+
+  .dark body {
+    @apply bg-ink-950 text-ink-50;
+  }
+
+  /* Indic scripts need a little more room: matras and descenders clip at
+     the tight line-heights that look good for Latin text. */
+  html:lang(ta),
+  html:lang(hi),
+  html:lang(bn),
+  html:lang(ml),
+  html:lang(gu),
+  html:lang(mr) {
+    line-height: 1.7;
+  }
+
+  ::selection {
+    @apply bg-brand-600 text-white;
+  }
+
+  :focus-visible {
+    @apply outline-2 outline-offset-2 outline-brand-500;
+  }
+}
+
+@layer components {
+  .headline {
+    line-height: 1.32;
+    text-wrap: balance;
+  }
+
+  html:lang(ta) .headline,
+  html:lang(hi) .headline,
+  html:lang(bn) .headline,
+  html:lang(ml) .headline,
+  html:lang(gu) .headline,
+  html:lang(mr) .headline {
+    line-height: 1.5;
+    text-wrap: pretty;
+  }
+}
+
+@layer utilities {
+  .no-scrollbar {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* Keeps the ticker from visibly popping at the mask edges. */
+  .ticker-mask {
+    mask-image: linear-gradient(to right, transparent, black 24px, black calc(100% - 24px), transparent);
+  }
+}
+
+/* ------------------------------------------------------------------ */
+/* Weather card: character motion + drifting particles                 */
+/* ------------------------------------------------------------------ */
+
+@keyframes wx-fan {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  50% { transform: translateY(-3px) rotate(-1.5deg); }
+}
+
+@keyframes wx-bob {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+}
+
+@keyframes wx-shiver {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(-1.6px); }
+  75% { transform: translateX(1.6px); }
+}
+
+@keyframes wx-bounce {
+  0%, 100% { transform: translateY(0) scale(1); }
+  50% { transform: translateY(-8px) scale(1.02); }
+}
+
+@keyframes wx-breathe {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.025); }
+}
+
+@keyframes wx-sway {
+  0%, 100% { transform: rotate(-2deg) translateY(0); }
+  50% { transform: rotate(2deg) translateY(-4px); }
+}
+
+@keyframes wx-drift {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-3px); }
+}
+
+@keyframes wx-fall {
+  0% { transform: translateY(-12px); opacity: 0; }
+  25% { opacity: 0.9; }
+  100% { transform: translateY(140px); opacity: 0; }
+}
+
+@keyframes wx-twinkle {
+  0%, 100% { opacity: 0.25; transform: scale(0.85); }
+  50% { opacity: 1; transform: scale(1.1); }
+}
+
+@keyframes wx-drift-across {
+  0% { transform: translateX(-14px) rotate(0deg); opacity: 0; }
+  30% { opacity: 0.95; }
+  100% { transform: translateX(64px) rotate(140deg); opacity: 0; }
+}
+
+@keyframes wx-rise {
+  0% { transform: translateY(10px); opacity: 0; }
+  40% { opacity: 0.8; }
+  100% { transform: translateY(-26px); opacity: 0; }
+}
+
+@keyframes wx-glow {
+  0%, 100% { opacity: 0.35; transform: scale(0.9); }
+  50% { opacity: 0.8; transform: scale(1.08); }
+}
+
+/* Indeterminate bar shown while a navigation is in flight. */
+@keyframes nav-progress {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(400%); }
+}
+
+.nav-progress {
+  animation: nav-progress 1.1s ease-in-out infinite;
+}
+
+@layer utilities {
+  .wx-fan { animation: wx-fan 2.4s ease-in-out infinite; }
+  .wx-bob { animation: wx-bob 3s ease-in-out infinite; }
+  .wx-shiver { animation: wx-shiver 0.18s linear infinite; }
+  .wx-bounce { animation: wx-bounce 2.6s ease-in-out infinite; }
+  .wx-breathe { animation: wx-breathe 5s ease-in-out infinite; }
+  .wx-sway { animation: wx-sway 2.8s ease-in-out infinite; }
+  .wx-drift { animation: wx-drift 4.5s ease-in-out infinite; }
+
+  .wx-drop { animation: wx-fall 1.6s linear infinite; }
+  .wx-flake { animation: wx-fall 3.4s linear infinite; }
+  .wx-heat { animation: wx-rise 2.6s ease-in-out infinite; }
+  .wx-star { animation: wx-twinkle 2.4s ease-in-out infinite; }
+  .wx-leaf { animation: wx-drift-across 4.2s ease-in-out infinite; }
+  .wx-ray { animation: wx-glow 3.2s ease-in-out infinite; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .wx-fan,
+  .wx-bob,
+  .wx-shiver,
+  .wx-bounce,
+  .wx-breathe,
+  .wx-sway,
+  .wx-drift,
+  .wx-drop,
+  .wx-flake,
+  .wx-heat,
+  .wx-star,
+  .wx-leaf,
+  .wx-ray,
+  .nav-progress {
+    animation: none;
+  }
+}

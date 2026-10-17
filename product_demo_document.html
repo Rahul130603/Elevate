@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Meeetly / Gentize Scheduling Platform - Product Demo Document</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;700&display=swap');
+
+    :root {
+      --primary: #f97316;
+      --primary-dark: #ea580c;
+      --primary-light: #fff7ed;
+      --slate-900: #0f172a;
+      --slate-800: #1e293b;
+      --slate-700: #334155;
+      --slate-500: #64748b;
+      --slate-200: #e2e8f0;
+      --slate-100: #f1f5f9;
+      --slate-50: #f8fafc;
+      --emerald-600: #059669;
+      --emerald-50: #ecfdf5;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      color: var(--slate-800);
+      background-color: #f8fafc;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 30px auto;
+      background: #ffffff;
+      padding: 48px;
+      border-radius: 24px;
+      box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.01);
+      border: 1px solid var(--slate-200);
+    }
+
+    /* Header */
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      border-bottom: 2px solid var(--slate-100);
+      padding-bottom: 28px;
+      margin-bottom: 32px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .logo-badge {
+      width: 44px;
+      height: 44px;
+      background: var(--primary);
+      color: #fff;
+      font-size: 20px;
+      font-weight: 800;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 14px;
+      box-shadow: 0 4px 12px rgba(249, 115, 22, 0.25);
+    }
+
+    .brand-text h1 {
+      font-size: 22px;
+      font-weight: 800;
+      color: var(--slate-900);
+      letter-spacing: -0.5px;
+    }
+
+    .brand-text p {
+      font-size: 12px;
+      color: var(--slate-500);
+      font-weight: 600;
+    }
+
+    .doc-meta {
+      text-align: right;
+    }
+
+    .badge-pill {
+      display: inline-block;
+      padding: 4px 12px;
+      background: var(--primary-light);
+      color: var(--primary-dark);
+      font-size: 11px;
+      font-weight: 700;
+      border-radius: 9999px;
+      border: 1px solid #fed7aa;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-bottom: 6px;
+    }
+
+    .meta-date {
+      font-size: 12px;
+      color: var(--slate-500);
+      font-weight: 500;
+    }
+
+    /* Section Styling */
+    .section-title {
+      font-size: 18px;
+      font-weight: 800;
+      color: var(--slate-900);
+      margin: 28px 0 16px 0;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .section-title::before {
+      content: '';
+      display: inline-block;
+      width: 4px;
+      height: 18px;
+      background: var(--primary);
+      border-radius: 4px;
+    }
+
+    p.lead {
+      font-size: 14px;
+      color: var(--slate-700);
+      margin-bottom: 20px;
+    }
+
+    /* Feature Grid */
+    .feature-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      margin-bottom: 28px;
+    }
+
+    .feature-card {
+      padding: 20px;
+      border-radius: 16px;
+      border: 1px solid var(--slate-200);
+      background: #ffffff;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.02);
+    }
+
+    .feature-card h3 {
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--slate-900);
+      margin-bottom: 6px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .feature-card p {
+      font-size: 12px;
+      color: var(--slate-500);
+      line-height: 1.5;
+    }
+
+    .tag {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 10px;
+      padding: 2px 6px;
+      background: var(--slate-100);
+      color: var(--slate-700);
+      border-radius: 4px;
+      font-weight: 600;
+    }
+
+    /* Screen Walkthrough Table */
+    .screen-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 16px 0 28px 0;
+      font-size: 13px;
+    }
+
+    .screen-table th {
+      background: var(--slate-50);
+      padding: 12px 16px;
+      text-align: left;
+      font-weight: 700;
+      color: var(--slate-700);
+      border-bottom: 2px solid var(--slate-200);
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .screen-table td {
+      padding: 14px 16px;
+      border-bottom: 1px solid var(--slate-200);
+      vertical-align: top;
+    }
+
+    .screen-name {
+      font-weight: 700;
+      color: var(--slate-900);
+      display: block;
+      margin-bottom: 2px;
+    }
+
+    .screen-url {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 11px;
+      color: var(--primary);
+    }
+
+    /* Highlights Box */
+    .highlight-box {
+      background: var(--primary-light);
+      border: 1px solid #fed7aa;
+      border-radius: 16px;
+      padding: 20px;
+      margin: 24px 0;
+    }
+
+    .highlight-box h4 {
+      font-size: 13px;
+      font-weight: 800;
+      color: var(--primary-dark);
+      margin-bottom: 8px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .highlight-box ul {
+      margin-left: 20px;
+      font-size: 12px;
+      color: var(--slate-700);
+      line-height: 1.8;
+    }
+
+    /* Footer */
+    .footer {
+      border-top: 1px solid var(--slate-200);
+      padding-top: 20px;
+      margin-top: 36px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 11px;
+      color: var(--slate-400);
+    }
+
+    .print-btn {
+      display: inline-block;
+      padding: 8px 16px;
+      background: var(--primary);
+      color: #fff;
+      border-radius: 10px;
+      font-size: 12px;
+      font-weight: 700;
+      text-decoration: none;
+      border: none;
+      cursor: pointer;
+      box-shadow: 0 2px 6px rgba(249, 115, 22, 0.3);
+    }
+
+    /* Print media query */
+    @media print {
+      body {
+        background: #fff;
+      }
+      .container {
+        box-shadow: none;
+        border: none;
+        padding: 0;
+        margin: 0;
+        max-width: 100%;
+      }
+      .no-print {
+        display: none !important;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <!-- Header -->
+    <div class="header">
+      <div class="brand">
+        <div class="logo-badge">M</div>
+        <div class="brand-text">
+          <h1>Meeetly Scheduling Platform</h1>
+          <p>Enterprise Appointment Management & Real-Time Calendar Solution</p>
+        </div>
+      </div>
+      <div class="doc-meta">
+        <span class="badge-pill">Product Demo & Architecture Report</span>
+        <div class="meta-date">Version 2.4 • September 2026</div>
+      </div>
+    </div>
+
+    <!-- Overview -->
+    <p class="lead">
+      <strong>Meeetly</strong> is a full-stack executive appointment scheduling platform built for modern enterprises. It provides an automated, synchronized workflow between external clients and organizational leadership (MD/Executives), featuring real-time availability slots, interactive booking, live status updates, and multi-channel notification dispatch.
+    </p>
+
+    <!-- Key Product Capabilities -->
+    <h2 class="section-title">Core Modules & Architecture</h2>
+    <div class="feature-grid">
+      <div class="feature-card">
+        <h3><span>🗓️</span> Dynamic Calendar & Slots</h3>
+        <p>Real-time date picker with instant slot capacity calculation. Available slots are clearly demarcated with branded <span class="tag">AS</span> badges, morning/afternoon categorizations, and instant lock prevention.</p>
+      </div>
+      <div class="feature-card">
+        <h3><span>🌐</span> Interactive Client Portal</h3>
+        <p>A friction-free, 3-step scheduling funnel for clients: Date selection &rarr; Slot reservation &rarr; Attendee info submission with Google Maps venue integration and instant WhatsApp confirmation.</p>
+      </div>
+      <div class="feature-card">
+        <h3><span>🔔</span> Smart Notification Engine</h3>
+        <p>Two-way reactive notification pipeline. Features dynamic unread badges that automatically clear once viewed. Tracks in-app alerts, simulated SMS, and real-time push events.</p>
+      </div>
+      <div class="feature-card">
+        <h3><span>🛡️</span> Admin Command Center</h3>
+        <p>Dedicated executive dashboard with personalized time greetings (<span class="tag">Good Morning, Sudhin</span>), 1-click approvals, rescheduling modals, and capacity analytics.</p>
+      </div>
+    </div>
+
+    <!-- Screen-by-Screen Walkthrough -->
+    <h2 class="section-title">Key Screens & Feature Walkthrough</h2>
+    <table class="screen-table">
+      <thead>
+        <tr>
+          <th style="width: 28%;">Module / Screen</th>
+          <th style="width: 42%;">Key Capabilities Shown in Demo</th>
+          <th style="width: 30%;">Visual Indicators</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>
+            <span class="screen-name">Admin Dashboard</span>
+            <span class="screen-url">/admin?portal=admin</span>
+          </td>
+          <td>
+            Executive briefing, real-time KPI stat cards (Total Slots, Booked, Available), dynamic time-based greeting, and live calendar matrix.
+          </td>
+          <td>
+            Personalized greeting, time pills, live sync indicators, orange KPI highlights.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <span class="screen-name">Master Calendar</span>
+            <span class="screen-url">Admin &rarr; Calendar View</span>
+          </td>
+          <td>
+            Interactive monthly calendar view with two-tier dot indicator (orange for Booked, amber/green for open slots) and full bottom event inspector.
+          </td>
+          <td>
+            <strong>AS</strong> orange badge for Available Slots, attendee avatars, status tags.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <span class="screen-name">Client Booking Flow</span>
+            <span class="screen-url">/?portal=client</span>
+          </td>
+          <td>
+            3-Step streamlined booking wizard: Day selection &rarr; Time slot picking &rarr; Purpose and Attendee registration with real-time feedback.
+          </td>
+          <td>
+            Clean stepper, host profile card, verified access badge, responsive slot pills.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <span class="screen-name">My Appointments Hub</span>
+            <span class="screen-url">Client &rarr; My Appointments</span>
+          </td>
+          <td>
+            Client-facing status dashboard showing live approval decisions (Confirmed, Pending, Rescheduled, Cancelled) with zero clutter.
+          </td>
+          <td>
+            Crisp white card backgrounds, verified checkmarks, WhatsApp share, Google Meet launch.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <span class="screen-name">Notification Center</span>
+            <span class="screen-url">Admin & Client Badges</span>
+          </td>
+          <td>
+            Centralized notification hub. Count badges display exclusively when new events occur and disappear automatically upon review.
+          </td>
+          <td>
+            Reactive notification pills, multi-channel delivery audit (Push/SMS/Email).
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <!-- Today's Engineering Deliverables -->
+    <div class="highlight-box">
+      <h4>Today's Production Upgrades & Enhancements</h4>
+      <ul>
+        <li><strong>Unified Orange & White Aesthetics:</strong> Enforced high-contrast `#f97316` brand palette with clean white typography and crisp backgrounds.</li>
+        <li><strong>Slot Clarity:</strong> Introduced the standardized <strong>AS (Available Slot)</strong> badge for instant readability.</li>
+        <li><strong>Zero Ghost Badge Count:</strong> Notifications only increment when unread events arrive and clear permanently once opened.</li>
+        <li><strong>Client Identity Bridge:</strong> Integrated database `client_id` migrations for reliable cross-portal synchronization.</li>
+        <li><strong>Enterprise Personalization:</strong> Added dynamic admin name and executive greeting support.</li>
+      </ul>
+    </div>
+
+    <!-- Technical Stack Summary -->
+    <h2 class="section-title">Technical Architecture & Reliability</h2>
+    <div style="font-size: 12px; color: var(--slate-700); line-height: 1.8;">
+      <p>• <strong>Frontend:</strong> React 19, Tailwind CSS v4, Lucide Icons, Vite (Rolldown engine)</p>
+      <p>• <strong>Backend:</strong> Node.js / Express REST API with SQLite database layer</p>
+      <p>• <strong>Verification Status:</strong> Production build passed with <strong>0 errors</strong> (1924 modules transformed)</p>
+      <p>• <strong>Mobile Hybrid Readiness:</strong> Capacitor Android runtime available with zero web overhead</p>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+      <div>Meeetly Technologies • Confidential Demo Document</div>
+      <div class="no-print">
+        <button onclick="window.print()" class="print-btn">🖨️ Export / Print as PDF</button>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>

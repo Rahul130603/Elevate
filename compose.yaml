@@ -1,0 +1,37 @@
+services:
+  elevate:
+    build:
+      context: .
+      args:
+        NEXT_PUBLIC_SITE_URL: ${NEXT_PUBLIC_SITE_URL:-http://localhost:3000}
+    image: elevate-calendar:local
+    init: true
+    restart: unless-stopped
+    ports:
+      - "3000:3000"
+      - "5000:5000"
+    environment:
+      PORT: "5000"
+      INDUSTRY_NEWS_PORT: "3101"
+      DISABLE_AUTO_DISCOVERY: "1"
+      GOOGLE_CLIENT_ID: ${GOOGLE_CLIENT_ID:-}
+      SMTP_HOST: ${SMTP_HOST:-smtp.gmail.com}
+      SMTP_PORT: ${SMTP_PORT:-587}
+      SMTP_SECURE: ${SMTP_SECURE:-false}
+      SMTP_USER: ${SMTP_USER:-}
+      SMTP_PASS: ${SMTP_PASS:-}
+      MAIL_FROM: ${MAIL_FROM:-}
+      STORY_LINK_SECRET: ${STORY_LINK_SECRET:-}
+      NEWS_COUNTRY: ${NEWS_COUNTRY:-IN}
+      NEWS_REVALIDATE_SECONDS: ${NEWS_REVALIDATE_SECONDS:-300}
+      NEWS_IMAGES: ${NEWS_IMAGES:-on}
+      BRIEF_API_KEY: ${BRIEF_API_KEY:-}
+      BRIEF_MODEL: ${BRIEF_MODEL:-}
+      BRIEF_API_BASE_URL: ${BRIEF_API_BASE_URL:-}
+      GEMINI_API_KEY: ${GEMINI_API_KEY:-}
+      GEMINI_SUMMARY_MODEL: ${GEMINI_SUMMARY_MODEL:-}
+    volumes:
+      - elevate-data:/app/data
+
+volumes:
+  elevate-data:
