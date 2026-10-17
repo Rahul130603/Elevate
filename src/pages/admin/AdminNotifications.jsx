@@ -375,7 +375,17 @@ export function AdminNotifications({ setTab, onNavigateToBooking, target = 'MD' 
       {/* Header with Filter Tabs and Action Buttons */}
       <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 shrink-0">
         <div>
-          <h1 className="text-xl font-bold text-slate-900 tracking-tight"><GentizeText logo>Notification History & Gentize Approvals</GentizeText></h1>
+          {target === 'SALES_LEAD' ? (
+            <h1 className="flex flex-wrap items-center gap-x-1.5 text-xl font-bold leading-tight text-slate-900 tracking-tight">
+              <span>Notification History &</span>
+              <span className="inline-flex items-center gap-x-1.5 whitespace-nowrap">
+                <img src="/gentize-wordmark.png" alt="Gentize" className="block h-auto w-[3.6em] shrink-0" />
+                <span>Approvals</span>
+              </span>
+            </h1>
+          ) : (
+            <h1 className="text-xl font-bold text-slate-900 tracking-tight"><GentizeText logo>Notification History & Gentize Approvals</GentizeText></h1>
+          )}
           <p className="text-xs text-slate-500">
             Review alerts, audit outbound SMS/Email, and confirm, reschedule, or cancel client bookings directly.
           </p>
